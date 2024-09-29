@@ -1,0 +1,18 @@
+services:
+  api:
+    image: mcr.microsoft.com/devcontainers/javascript-node:22
+    container_name: node-example-api
+    network_mode: service:db
+    volumes:
+      - ..:/workspace:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
+  db:
+    image: mongo:7
+    container_name: node-example-db
+    ports:
+      - 27017:27017
+    volumes:
+      - node-example-db-data:/data/db
+
+volumes:
+  node-example-db-data:

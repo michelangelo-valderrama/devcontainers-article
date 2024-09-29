@@ -1,0 +1,14 @@
+{
+  "name": "web-example-01",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "vite": "^5.4.1"
+  }
+}

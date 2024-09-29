@@ -1,0 +1,22 @@
+{
+  "name": "vite-example",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": ["-p=5173:5173"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+      }
+    }
+  },
+  "postCreateCommand": "npm i && npm run dev",
+  "remoteUser": "node"
+}

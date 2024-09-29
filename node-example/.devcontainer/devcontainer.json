@@ -1,0 +1,19 @@
+{
+  "name": "node-example",
+  "dockerComposeFile": "compose.yml",
+  "service": "api",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mongodb.mongodb-vscode",
+        "Postman.postman-for-vscode"
+      ]
+    }
+  },
+  "forwardPorts": [
+    3000
+  ],
+  "postCreateCommand": "npm i && npm run dev",
+  "remoteUser": "node"
+}
